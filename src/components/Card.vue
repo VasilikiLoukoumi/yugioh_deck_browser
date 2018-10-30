@@ -2,9 +2,9 @@
   <div id="cardComponent">
 	<h2>Card Info</h2>
 	<div class="cardInfo" v-if="isCardSelected">    
-				<div class="row" >
+				<div class="row">
 			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">        
-				<img alt="card image" v-bind:src="imgUrl + selectedCard.name" class="img-fluid rounded" />
+				<img v-bind:alt="selectedCard.name +' image'" v-bind:src="imgUrl + selectedCard.name" class="img-fluid rounded" />
 			</div>
 			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div v-for="(value, key) in selectedCard">
@@ -19,7 +19,7 @@
 		
 		<div class="row">
 			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-				<img ref="defImg" v-bind:alt="defaultCard.name +' image'" v-bind:src="imgUrl + defaultCard.name" class="img-fluid rounded" />
+				<img v-bind:alt="defaultCard.name +' image'" v-bind:src="imgUrl + defaultCard.name" class="img-fluid rounded" />
 			</div>
 			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
        <div v-for="(value, key) in defaultCard">
@@ -64,19 +64,11 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 .blockquote {
   text-align: center;
 }
 .cardInfo{
-  max-height: 450px;
+  max-height: 550px;
   overflow-x: hidden;
   overflow-y:scroll;
 }

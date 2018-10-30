@@ -81,7 +81,7 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h2 {
   font-weight: normal;
 }
 ul {
@@ -89,7 +89,7 @@ ul {
   padding: 0;
   overflow-x:hidden;
   overflow-y:scroll;
-  max-height: 450px;
+  max-height: 550px;
 }
 
 li{
